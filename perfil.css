@@ -94,6 +94,7 @@ form input {
     margin: 20px;
     color: #526D82;
     font-size: 1.3em;
+    border-radius: 4px;
 }
 
 #registrarse {
