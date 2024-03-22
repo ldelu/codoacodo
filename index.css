@@ -89,6 +89,7 @@ nav li a:hover {
     float: left;
     height: 220px;
     width: 240px;
+    padding: 10px;
 }
 
 .carousel li img {
@@ -98,9 +99,11 @@ nav li a:hover {
 }
 
 .zoom:hover {
-    transform: scale(1.3);
-    transition: 0.4s;
+    transform: scale(1.2);
+    opacity: 0.5;
+    transition: 0.8s;
 }
+
 .epigraph {
     color: #9DB2BF;
     font-weight: 500;
