@@ -11,14 +11,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Noto+Sans+Lao+Looped:wght@100..900&display=swap" rel="stylesheet">
-    <title><Escuch class="ar"></Escuch></title>
+    <title>Escuch.ar</title>
 </head>
 <body>
     <table>
         <tbody>
             <tr>
                 {% for item in datos %}
-                    <th>{{ item }}</th>
+                    <th>{{ item.upper() }}</th>
                 {% endfor %}
             </tr>
                 
