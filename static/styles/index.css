@@ -15,15 +15,6 @@ header {
     height: 8vh;
 }
 
-@media screen and (max-width: 935px) {
-    header {
-        position: sticky;
-        top: 0px;
-        z-index: 1;
-        background-color: #27374D;
-    }
-}
-
 header a {
     color: #DDE6ED;
     text-decoration: none;
@@ -35,16 +26,7 @@ header a {
     height: 100%;
 }
 
-@media screen and (max-width: 935px) {
-
-    .nav-section {
-        margin: 0px;
-    }
-
-}
-
 h1 {
-    position: relative;
     display: inline;
     float: left;
     font-size: 2em;
@@ -54,16 +36,6 @@ h1 {
     height: 42px;
 }
 
-@media screen and (max-width: 935px) {
-    h1 {
-        display: block;
-        font-size: 2.5em;
-        margin: 22px auto auto auto;
-        letter-spacing: 0.3em;
-        left: calc(50vw - 4em);
-    }
-}
-
 nav {
     position: relative;
     float: left;
@@ -71,58 +43,15 @@ nav {
     height: 42px;
 }
 
-@media screen and (max-width: 935px) {
-    nav {
-        position: sticky;
-        top: 0px;
-        left: 0%;
-        width: 100vw;
-        margin: auto;
-    }
-}
-
 ol, ul {
     list-style: none;
     margin: 0px;
-}
-
-@media screen and (max-width: 935px) {
-    .main-nav ul {
-        position: sticky;
-        z-index: 1;
-        background-color: #27374D;
-        top: 5vh;
-        display: grid;
-        grid-template-columns: 25% 25% 25% 25%;
-    }
 }
 
 nav li {
     display: inline;
     padding: 2vw;
     top: 10%;
-}
-
-@media screen and (max-width: 935px) {
-    #perfil {
-        display: block;
-        grid-column: 1 / 2;
-    }
-
-    #discos {
-        display: block;
-        grid-column: 2 / 3;
-    }
-
-    #listas {
-        display: block;
-        grid-column: 3 / 4;
-    }
-
-    #buscar {
-        display: block;
-        grid-column: 4 / 5;
-    }
 }
 
 nav li a {
@@ -132,44 +61,19 @@ nav li a {
     text-decoration: none;
 }
 
-@media screen and (max-width: 935px) {
-    nav li a {
-        font-size: 2em;
-    }
-}
-
 nav li a:hover {
     color: #9DB2BF;
     transition: 0.2s;
 }
 
 .content section {
-    position: relative;
     color: #9DB2BF;
     margin: auto;
     width: 60%;
 }
 
-@media screen and (max-width: 935px) {
-    .content section {
-        overflow: hidden;
-        top: 10vh;
-        width: 100%;
-    }
-}
-
 .content h2 {
     border-bottom: 1px solid #9DB2BF;
-}
-
-@media screen and (max-width: 935px) {
-    .content h2 {
-        position: relative;
-        border: none;
-        width: fit-content;
-        margin: auto;
-        padding: auto;
-    }
 }
 
 .carousel {
@@ -186,31 +90,6 @@ nav li a:hover {
     height: 220px;
     width: 240px;
     padding: 10px;
-}
-
-@media screen and (max-width: 935px) {
-    .carousel {
-        position: relative;
-        width: 100%;
-        margin: auto;
-        padding: auto;
-    }
-
-
-    .carousel ul {
-        display: grid;
-        position: relative;
-        grid-template-rows: 25% 25% 25% 25%;
-        grid-template-columns: 100%;
-        width: fit-content;
-        margin: auto;
-        padding: 0px;
-    }
-
-    .carousel li {
-        padding: 5vh;
-    }
-    
 }
 
 .carousel li img {
