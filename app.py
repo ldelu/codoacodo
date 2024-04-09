@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from flask import Flask, request, render_template
 from markupsafe import escape
 
@@ -18,11 +17,6 @@ def form(name=None):
     'apellido': request.form['apellido'],
     'email': request.form['email'],
     'contraseña': request.form['contraseña']}
-
-    datos_str = str(datos)
-
-    with open("datos.txt", "a", encoding='utf-8') as fo:
-        fo.write(datos_str)
 
     return render_template('registrarse.html', datos=datos)
 
