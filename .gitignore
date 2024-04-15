@@ -1372,3 +1372,4 @@
 .venv/Scripts/python.exe
 .venv/Scripts/pythonw.exe
 __pycache__/registrarse.cpython-312.pyc
+/__pycache__/app.cpython-312.pyc
