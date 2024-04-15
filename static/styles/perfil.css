@@ -15,15 +15,6 @@ header {
     height: 8vh;
 }
 
-@media screen and (max-width: 935px) {
-    header {
-        position: sticky;
-        top: 0px;
-        z-index: 1;
-        background-color: #27374D;
-    }
-}
-
 header a {
     color: #DDE6ED;
     text-decoration: none;
@@ -35,14 +26,6 @@ header a {
     height: 100%;
 }
 
-@media screen and (max-width: 935px) {
-
-    .nav-section {
-        margin: 0px;
-    }
-
-}
-
 h1 {
     position: relative;
     display: inline;
@@ -52,16 +35,6 @@ h1 {
     font-style: normal;
     margin-top: 22px;
     height: 42px;
-}
-
-@media screen and (max-width: 935px) {
-    h1 {
-        display: block;
-        font-size: 2.5em;
-        margin: 22px auto auto auto;
-        letter-spacing: 0.3em;
-        left: calc(50vw - 4em);
-    }
 }
 
 h2 {
@@ -77,30 +50,9 @@ nav {
     height: 42px;
 }
 
-@media screen and (max-width: 935px) {
-    nav {
-        position: relative;
-        top: 0px;
-        left: 0%;
-        width: 100vw;
-        margin: auto;
-    }
-}
-
 ol, ul {
     list-style: none;
     margin: 0px;
-}
-
-@media screen and (max-width: 935px) {
-    .main-nav ul {
-        position: sticky;
-        z-index: 1;
-        background-color: #27374D;
-        top: 5vh;
-        display: grid;
-        grid-template-columns: 25% 25% 25% 25%;
-    }
 }
 
 nav li {
@@ -109,39 +61,11 @@ nav li {
     top: 10%;
 }
 
-@media screen and (max-width: 935px) {
-    #perfil {
-        display: block;
-        grid-column: 1 / 2;
-    }
-
-    #discos {
-        display: block;
-        grid-column: 2 / 3;
-    }
-
-    #listas {
-        display: block;
-        grid-column: 3 / 4;
-    }
-
-    #buscar {
-        display: block;
-        grid-column: 4 / 5;
-    }
-}
-
 nav li a {
     font: 400;
     font-weight: 700;
     color: #526D82;
     text-decoration: none;
-}
-
-@media screen and (max-width: 935px) {
-    nav li a {
-        font-size: 2em;
-    }
 }
 
 nav li a:hover {
@@ -177,4 +101,70 @@ form input {
 #registrarse {
     width: 40%;
     color: #27374D;
+}
+
+@media screen and (max-width: 935px) {
+    header {
+        position: sticky;
+        top: 0px;
+        z-index: 1;
+        background-color: #27374D;
+    }
+
+    .nav-section {
+        margin: 0px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: space-between;
+        align-items: center;
+    }
+
+    h1 {
+        font-size: 2.5em;
+        margin: 22px auto auto auto;
+        letter-spacing: 0.3em;
+    }
+
+    nav {
+        position: relative;
+        top: 0px;
+        left: 0%;
+        width: 100vw;
+        margin: auto;
+    }
+
+    .main-nav ul {
+        position: sticky;
+        z-index: 1;
+        background-color: #27374D;
+        top: 5vh;
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+    }
+
+    #perfil {
+        display: block;
+        grid-column: 1 / 2;
+    }
+
+    #discos {
+        display: block;
+        grid-column: 2 / 3;
+    }
+
+    #listas {
+        display: block;
+        grid-column: 3 / 4;
+    }
+
+    #buscar {
+        display: block;
+        grid-column: 4 / 5;
+    }
+
+    nav li a {
+        font-size: calc(15px + 1vw);
+    }
 }

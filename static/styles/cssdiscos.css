@@ -66,9 +66,28 @@ nav li a:hover {
     transition: 0.2s;
 }
 
+.content {
+    color: #DDE6ED;
+    margin-left: 20vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.content > section {
+    flex: 1 100%;
+}
+
+#descripción {
+    color: #9DB2BF;
+    letter-spacing: 1ex;
+    flex: 1 0 100%;
+}
+
 .cover {
     margin: auto;
     float: left;
+    flex: 0 0 auto;
 }
 
 .cover img {
@@ -77,21 +96,110 @@ nav li a:hover {
     border: #9DB2BF solid 2px;
 }
 
-.content {
-    color: #DDE6ED;
-    margin-left: 20vw;
-}
-
-#descripción {
-    color: #9DB2BF;
-    letter-spacing: 1ex;
-}
-
 #song-list {
     list-style-type: decimal;
     float: left;
+    flex: 1 0 auto;
 }
 
 #song-list li {
     padding: 4px 0;
+}
+
+footer {
+    display: none;
+}
+
+@media screen and (max-width: 935px) {
+    header {
+        position: sticky;
+        top: 0px;
+        z-index: 1;
+        background-color: #27374D;
+    }
+
+    .nav-section {
+        margin: 0px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: space-between;
+        align-items: center;
+    }
+
+    h1 {
+        font-size: 2.5em;
+        margin: 22px auto auto auto;
+        letter-spacing: 0.3em;
+    }
+
+    nav {
+        position: relative;
+        top: 0px;
+        left: 0%;
+        width: 100vw;
+        margin: auto;
+    }
+
+    .main-nav ul {
+        position: sticky;
+        z-index: 1;
+        background-color: #27374D;
+        top: 5vh;
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+    }
+
+    #perfil {
+        display: block;
+        grid-column: 1 / 2;
+    }
+
+    #discos {
+        display: block;
+        grid-column: 2 / 3;
+    }
+
+    #listas {
+        display: block;
+        grid-column: 3 / 4;
+    }
+
+    #buscar {
+        display: block;
+        grid-column: 4 / 5;
+    }
+
+    nav li a {
+        font-size: calc(15px + 1vw);
+    }
+
+    .content {
+        position: relative;
+        top: 50px;
+        justify-content: center;
+        align-content: space-evenly;
+        margin-bottom: 20px;
+    }
+
+    .content > * {
+        flex: 1 100%;
+    }
+
+    .content section {order: 1;}
+
+    #descripción {order: 2;}
+
+    .cover {order: 3;}
+
+    #song-list {order: 4;}
+
+    footer {
+        align-self: center;
+        display: block;
+        order: 5;
+        margin-top: 40px;
+        opacity: 0.5;
+    }
 }
