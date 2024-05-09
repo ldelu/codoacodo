@@ -66,20 +66,23 @@ function selectedDisc(selDisc) {
     songlist.appendChild(listatemas);
 
     var player = document.getElementById('player');
+
     if (document.getElementById('iplayer')) {
         document.getElementById('iplayer').remove();
     }
 
     var iplayer = document.createElement('iframe');
     iplayer.id = 'iplayer';
-    iplayer.width = "640";
-    iplayer.height = "360";
+    iplayer.classList.add('iplayer');
+    iplayer.width = '640';
+    iplayer.height = "320";
     iplayer.src = 'https://www.youtube.com/embed/' + videolink;
-    iplayer.frameborder = "0";
+    // iplayer.frameborder = "0";
     iplayer.allowfullscreen;
-    iplayer.title = "YouTube video player"
-    iplayer.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    iplayer.referrerpolicy = "strict-origin-when-cross-origin"
+    // iplayer.title = "YouTube video player";
+    iplayer.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+    iplayer.referrerpolicy = "strict-origin-when-cross-origin";
+
     player.appendChild(iplayer);
 
 }

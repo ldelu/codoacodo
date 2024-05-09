@@ -51,7 +51,8 @@ nav {
     height: 42px;
 }
 
-ol, ul {
+ol,
+ul {
     /* list-style: none; */
     margin: 0px;
 }
@@ -74,75 +75,36 @@ nav li a:hover {
     transition: 0.2s;
 }
 
-.content {
-    height: 100%;
-    width: 100%;
-    color: #DDE6ED;
-    margin: 0px;
-    display: grid;
-    grid-template-columns: 20% 40% 40%;
-    grid-template-areas: 'lista-discos detalle-disco video';
+.listadiscos {
+    grid-area: listadiscos;
 }
 
-#descripcion {
-    color: #9DB2BF;
-    letter-spacing: 1ex;
-    flex: 1 0 100%;
+.listadiscos ul {
+    list-style: circle;
 }
 
-.lista-discos {
-    grid-area: 'lista-discos';
-
-}
-
-.lista-discos ul {
-    list-style: circle;    
-}
-
-.lista-discos ul:hover {
+.listadiscos ul:hover {
     cursor: pointer;
 }
 
-.detalle-disco {
-    grid-area: 'detalle-disco';
+.detalledisco {
+    grid-area: detalledisco;
 }
 
 .video {
-    grid-area: 'video';
+    grid-area: video;
     align-content: center;
 }
 
-.register {
-    margin: auto;
-    width: 60%;
-    height: 100%;
-    display: block;
-}
-
-form {
-    height: auto;
-}
-
 .albumName {
-    grid-area: 'albumName';
-}
-
-.description {
-    grid-area: 'description';
-}
-
-.songlist {
-    grid-area: 'songlist';
-    list-style-type: decimal;
-    float: left;
-    flex: 1 0 auto;
+    grid-area: albumName;
 }
 
 .cover {
     margin: auto;
     float: left;
     flex: 0 0 auto;
-    grid-area: 'coveralbum';
+    grid-area: coveralbum;
 }
 
 .cover img {
@@ -151,84 +113,91 @@ form {
     border: #9DB2BF solid 2px;
 }
 
-@media screen and (max-width: 720px) {
+.songlist {
+    grid-area: songlist;
+    list-style-type: decimal;
+    float: left;
+    flex: 1 0 auto;
+}
+
+.description {
+    grid-area: description;
+}
+
+#descripcion {
+    color: #9DB2BF;
+    letter-spacing: 1ex;
+    flex: 1 0 100%;
+}
+
+#iplayer {
+    justify-items: center;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 20% 40% auto;
+    /* grid-template-rows: 70% 30%; */
+    grid-template-areas: 'listadiscos detalledisco video';
+    height: 100%;
+    width: 100%;
+    color: #DDE6ED;
+    margin: 0px;
+}
+
+@media screen and (max-width: 1410px) {
+    .content {
+        height: 100%;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 30% 70%;
+        grid-template-areas: 'listadiscos detalledisco'
+                                'listadiscos video';
+        color: #DDE6ED;
+        margin: 0px;
+    }
+}
+
+@media screen and (max-width: 940px) {
     .content {
         display: grid;
-        grid-template-columns: 20% 50% 30%;
-        grid-template-areas: 'lista-discos detalle-disco video';
-    }
-
-    .detalle-disco {
-        display: grid;
-        grid-template-columns: 50% 50%;
-        grid-template-rows: 1pt 1pt 1pt;
-        grid-template-areas: 'albumName albumName'
-            'description description'
-            'coveralbum songlist';
-    }
-
-    header {
-        position: sticky;
-        top: 0px;
-        z-index: 1;
-        background-color: #27374D;
+        grid-template-columns: 100%;
+        /* grid-template-rows: auto auto auto; */
+        grid-template-areas: 'listadiscos'
+                            'detalledisco'
+                            'video';
+        height: 100%;
+        width: 100%;
+        color: #DDE6ED;
+        margin: 0px;
+        transition: 0.5s;
     }
 
     .nav-section {
-        margin: 0px;
+        margin: 0;
         width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-content: space-between;
-        align-items: center;
+        height: 60%;
     }
 
     h1 {
-        font-size: 2.5em;
-        margin: 22px auto auto auto;
-        letter-spacing: 0.3em;
-    }
-
-    nav {
         position: relative;
-        top: 0px;
-        left: 0%;
-        width: 100vw;
-        margin: auto;
+        display: inline;
+        float: left;
+        font-size: 2em;
+        font-family: "Madimi One", sans-serif;
+        font-style: normal;
+        margin-top: 10px;
+        height: 24px;
     }
 
-    .main-nav ul {
-        position: sticky;
-        z-index: 1;
-        background-color: #27374D;
-        top: 5vh;
-        display: grid;
-        grid-template-columns: 25% 25% 25% 25%;
+    .cover img {
+        width: 200px;
     }
 
-
-    #perfil {
-        display: block;
-        grid-column: 1 / 2;
-    }
-
-    #discos {
-        display: block;
-        grid-column: 2 / 3;
-    }
-
-    #listas {
-        display: block;
-        grid-column: 3 / 4;
-    }
-
-    #buscar {
-        display: block;
-        grid-column: 4 / 5;
-    }
-
-    nav li a {
-        font-size: calc(15px + 1vw);
+    .detalledisco {
+        border-color: #9DB2BF;
+        border-bottom: solid;
+        border-top: solid;
+        margin: 5px;
     }
 }
