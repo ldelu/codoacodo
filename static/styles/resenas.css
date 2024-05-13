@@ -27,6 +27,7 @@ header a {
 }
 
 h1 {
+    position: relative;
     display: inline;
     float: left;
     font-size: 2em;
@@ -43,16 +44,19 @@ nav {
     height: 42px;
 }
 
+
 ol, ul {
     list-style: none;
     margin: 0px;
 }
+
 
 nav li {
     display: inline;
     padding: 2vw;
     top: 10%;
 }
+
 
 nav li a {
     font: 400;
@@ -67,48 +71,10 @@ nav li a:hover {
 }
 
 .content {
-    color: #DDE6ED;
-    margin-left: 20vw;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: flex-start;
-}
-
-.content > section {
-    flex: 1 100%;
-}
-
-#descripción {
-    color: #9DB2BF;
-    letter-spacing: 1ex;
-    flex: 1 0 100%;
-}
-
-.cover {
-    margin: 0;
-    float: left;
-    flex: 0 0 auto;
-}
-
-.cover img {
-    width: 300px;
-    border-radius: 5%;
-    border: #9DB2BF solid 2px;
-}
-
-#song-list {
-    list-style-type: decimal;
-    float: left;
-    flex: 1 0 auto;
-}
-
-#song-list li {
-    padding: 4px 0;
-}
-
-footer {
-    display: none;
+    display: grid;
+    grid-template-areas: "header header"
+                         "mauro leo"
+                         "pedro otro";
 }
 
 @media screen and (max-width: 935px) {
@@ -174,33 +140,5 @@ footer {
 
     nav li a {
         font-size: calc(15px + 1vw);
-    }
-
-    .content {
-        position: relative;
-        top: 50px;
-        justify-content: center;
-        align-content: space-evenly;
-        margin-bottom: 20px;
-    }
-
-    .content > * {
-        flex: 1 100%;
-    }
-
-    .content section {order: 1;}
-
-    #descripción {order: 2;}
-
-    .cover {order: 3;}
-
-    #song-list {order: 4;}
-
-    footer {
-        align-self: center;
-        display: block;
-        order: 5;
-        margin-top: 40px;
-        opacity: 0.5;
     }
 }

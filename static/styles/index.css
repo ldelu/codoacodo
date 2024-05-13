@@ -107,10 +107,6 @@ nav li a:hover {
     padding: 10px 10px 40px 10px;
 }
 
-.carousel p {
-    margin: auto;
-}
-
 .carousel li img {
     max-height: 100%;
     max-width: 100%;
@@ -127,6 +123,7 @@ nav li a:hover {
     color: #9DB2BF;
     font-weight: 500;
     font: 200;
+    margin-top: 10;
 }
 
 @media screen and (max-width: 935px) {
@@ -170,12 +167,12 @@ nav li a:hover {
         grid-template-columns: 25% 25% 25% 25%;
     }
 
-    #perfil {
+    #registrarse {
         display: block;
         grid-column: 1 / 2;
     }
 
-    #discos {
+    #resenas {
         display: block;
         grid-column: 2 / 3;
     }
