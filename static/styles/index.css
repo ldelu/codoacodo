@@ -164,7 +164,9 @@ nav li a:hover {
         background-color: #27374D;
         top: 5vh;
         display: grid;
-        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-items: center;
+        padding: 0;
     }
 
     #registrarse {
@@ -177,15 +179,10 @@ nav li a:hover {
         grid-column: 2 / 3;
     }
 
-    #listas {
+   #discos {
         display: block;
         grid-column: 3 / 4;
-    }
-
-    #buscar {
-        display: block;
-        grid-column: 4 / 5;
-    }
+   }
 
     nav li a {
         font-size: calc(15px + 1vw);

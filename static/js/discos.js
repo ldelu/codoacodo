@@ -16,7 +16,7 @@ const unbaion = new disco('Un baión para el ojo idiota', 'Los Redonditos de Ric
 const lagrasa = new disco('La Grasa de las Capitales', 'Serú Girán', '1979',
     ['La Grasa de las Capitales', 'San Francisco y el Lobo', 'Perro Andaluz', 'Frecuencia Modulada',
         'Paranoia y Soledad', 'Noche de Perros', 'Viernes 3AM', 'Los Sobrevivientes', 'Canción de Hollywood'],
-    './discos/la-grasa/tapa-la-grasa.jpg', 'luT0RC8b6fc'
+    './discos/la-grasa/tapa-la-grasa.jpg', '2ODGjoxA-js'
 );
 
 const revolver = new disco('Revolver', 'The Beatles', '1966',
@@ -29,14 +29,14 @@ const revolver = new disco('Revolver', 'The Beatles', '1966',
 const abnormal = new disco('The New Abnormal', 'The Strokes', '2022',
     ['The Adults Are Talking', 'Selfless', 'Brooklyn Bridge to Chorus', 'Bad Decisions', 'Eternal Summer', 'At The Door'
         , 'Why Are Sundays So Depressing?', 'Not the Same Anymore', 'Ode To The Mets'],
-    './discos/the-new-abnormal/tapa-the-new-abnormal.jpeg', 'JGKW_eAKe7Y'
+    './discos/the-new-abnormal/tapa-the-new-abnormal.jpeg', 'jhfDq06ghfU'
 );
 
 const nirvunplug = new disco('MTV Unplugged', 'Nirvana', '1994',
                     ['About a Girl','Come as You Are',"Jesus Doesn't Want Me for a Sunbeam",'The Man Who Sold the World',
                     'Pennyroyal Tea','Dumb','Polly','On A Plain','Something In The Way','Plateau','Oh Me',
                     'Lake of Fire','All Apologies','Where Did You Sleep Last Night'],
-                    './discos/nirvana-unplugged/nirvana-unplug.webp', 'RGHMmxrJyPQ'
+                    './discos/nirvana-unplugged/nirvana-unplug.webp', 'IAp6bQfTQ20'
 );
 
 function selectedDisc(selDisc) {
