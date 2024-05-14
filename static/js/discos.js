@@ -1,10 +1,12 @@
-function disco(nombre, interprete, year, temas, tapa, video) {
-    this.nombre = nombre;
-    this.interprete = interprete;
-    this.year = year;
-    this.temas = temas;
-    this.tapa = tapa;
-    this.video = video;
+class disco {
+    constructor(nombre, interprete, year, temas, tapa, video) {
+        this.nombre = nombre;
+        this.interprete = interprete;
+        this.year = year;
+        this.temas = temas;
+        this.tapa = tapa;
+        this.video = video;
+    }
 }
 
 const unbaion = new disco('Un baión para el ojo idiota', 'Los Redonditos de Ricota', '1988',
@@ -33,15 +35,13 @@ const abnormal = new disco('The New Abnormal', 'The Strokes', '2022',
 );
 
 const nirvunplug = new disco('MTV Unplugged', 'Nirvana', '1994',
-                    ['About a Girl','Come as You Are',"Jesus Doesn't Want Me for a Sunbeam",'The Man Who Sold the World',
-                    'Pennyroyal Tea','Dumb','Polly','On A Plain','Something In The Way','Plateau','Oh Me',
-                    'Lake of Fire','All Apologies','Where Did You Sleep Last Night'],
-                    './discos/nirvana-unplugged/nirvana-unplug.webp', 'IAp6bQfTQ20'
+    ['About a Girl', 'Come as You Are', "Jesus Doesn't Want Me for a Sunbeam", 'The Man Who Sold the World',
+        'Pennyroyal Tea', 'Dumb', 'Polly', 'On A Plain', 'Something In The Way', 'Plateau', 'Oh Me',
+        'Lake of Fire', 'All Apologies', 'Where Did You Sleep Last Night'],
+    './discos/nirvana-unplugged/nirvana-unplug.webp', 'IAp6bQfTQ20'
 );
 
 function selectedDisc(selDisc) {
-
-    videolink = selDisc.video;
 
     document.getElementById('albumName').innerText = selDisc["nombre"];
     document.getElementById('descripcion').innerHTML = selDisc.year + ' - ' + selDisc.interprete;
@@ -76,10 +76,8 @@ function selectedDisc(selDisc) {
     iplayer.classList.add('iplayer');
     iplayer.width = '640';
     iplayer.height = "320";
-    iplayer.src = 'https://www.youtube.com/embed/' + videolink;
-    // iplayer.frameborder = "0";
+    iplayer.src = 'https://www.youtube.com/embed/' + selDisc['video'];
     iplayer.allowfullscreen;
-    // iplayer.title = "YouTube video player";
     iplayer.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
     iplayer.referrerpolicy = "strict-origin-when-cross-origin";
 
