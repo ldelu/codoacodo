@@ -1,9 +1,9 @@
 #--------------------------------------------------------------------
 # Instalar con pip install Flask
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 
 # Instalar con pip install flask-cors
-from flask_cors import CORS
+# from flask_cors import CORS
 
 # Instalar con pip install mysql-connector-python
 import mysql.connector
@@ -18,7 +18,7 @@ import time
 
 #Creo instancia de la Clase Flask
 app = Flask(__name__)
-CORS(app)  # Esto habilitará CORS para todas las rutas
+# CORS(app)  # Esto habilitará CORS para todas las rutas
 
 class Catalogo:
     #----------------------------------------------------------------
@@ -28,7 +28,6 @@ class Catalogo:
             host=host,
             user=user,
             password=password
-            
         )
         self.cursor = self.conn.cursor()
         # Intentamos seleccionar la base de datos
@@ -107,12 +106,12 @@ class Catalogo:
 #--------------------------------------------------------------------
 # Crear una instancia de la clase Catalogo
 #catalogo = Catalogo(host='localhost', user='root', password='', database='miapp')
-# catalogo = Catalogo(host="localhost", user="root", password="", database="miapp")
-catalogo = Catalogo(host='florcodo1.mysql.pythonanywhere-services.com', user='FlorCodo1', password='root-123456', database='FlorCodo1$miapp')
+catalogo = Catalogo(host="localhost", user="root", password="root-123456", database="miapp")
+# catalogo = Catalogo(host='florcodo1.mysql.pythonanywhere-services.com', user='FlorCodo1', password='root-123456', database='FlorCodo1$miapp')
 
 # Carpeta para guardar las imagenes
-#ruta_destino = './static/imagenes/'
-ruta_destino = '/home/florcodo1/static/imagenes/'   #recordar poner / después de imágenes
+ruta_destino = './static/imagenes/'
+# ruta_destino = '/home/florcodo1/static/imagenes/'   #recordar poner / después de imágenes
 
 @app.route("/productos", methods=["GET"])  #GET nos trae los productos
 def listar_productos():
@@ -136,7 +135,6 @@ def agregar_producto():
     imagen = request.files['imagen']
     proveedor = request.form['proveedor']  
     nombre_imagen = ""
-
     # Genero el nombre de la imagen
     nombre_imagen = secure_filename(imagen.filename) 
     nombre_base, extension = os.path.splitext(nombre_imagen) 
@@ -206,7 +204,26 @@ def eliminar_producto(codigo):
             return jsonify({"mensaje": "Error al eliminar el producto"}), 500
     else:
         return jsonify({"mensaje": "Producto no encontrado"}), 404
+    
+@app.route("/altas")
+def altas():
+    return render_template('altas.html')
 
+@app.route("/listado")
+def listado():
+    return render_template('listado.html')
+
+@app.route("/listadoEliminar")
+def listadoEliminar():
+    return render_template('listadoEliminar.html')
+
+@app.route("/modificaciones")
+def modificaciones():
+    return render_template('modificaciones.html')
+
+@app.route('/')
+def home():
+    return render_template('index.html')
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=8500, debug=True)
