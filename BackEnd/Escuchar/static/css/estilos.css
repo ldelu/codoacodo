@@ -222,9 +222,9 @@ form {
     padding: 20px;
     background-color: #3663a7;
     border: 1px solid lightslategray;
-    border-radius: 0px 20px 0px 20px;
-    box-shadow: 15px 15px 8px rgba(0, 0, 0, 0.8),
-    -15px -15px 8px rgba(255, 255, 255, 0.8);
+    border-radius: 25px 0px 25px 0px;
+    box-shadow: 12px 12px 10px rgba(0, 0, 0, 0.65),
+    -12px -12px 10px rgba(255, 255, 255, 0.65);
 }
 
 table {
@@ -234,9 +234,9 @@ table {
     background-color: #3663a7;
     border: 1px solid lightslategray;
     border-radius: 5px;
-    border-radius: 0px 20px 0px 20px;
-    box-shadow: 15px 15px 8px rgba(0, 0, 0, 0.8),
-    -15px -15px 8px rgba(255, 255, 255, 0.8);
+    border-radius: 25px 0px 25px 0px;
+    box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.65),
+    -12px -12px 10px rgba(255, 255, 255, 0.65);
 }
 
 label {
