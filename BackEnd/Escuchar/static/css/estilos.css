@@ -223,8 +223,8 @@ form {
     background-color: #3663a7;
     border: 1px solid lightslategray;
     border-radius: 0px 20px 0px 20px;
-    box-shadow: 15px 15px 5px rgba(0, 0, 0, 0.9),
-    15px 15px 5px rgba(255, 255, 255, 0.9);
+    box-shadow: 15px 15px 5px rgba(0, 0, 0, 0.8),
+    15px 15px 5px rgba(255, 255, 255, 0.8);
 }
 
 table {
