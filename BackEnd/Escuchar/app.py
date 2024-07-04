@@ -82,6 +82,7 @@ class Catalogo:
     def agregar_producto(self, descripcion, cantidad, precio, imagen, proveedor):
         sql = "INSERT INTO productos (descripcion, cantidad, precio, imagen_url, proveedor) VALUES (%s, %s, %s, %s, %s)"
         valores = (descripcion, cantidad, precio, imagen, proveedor)
+        print(sql)
 
         self.cursor.execute(sql,valores)
         self.conn.commit()
@@ -106,7 +107,7 @@ class Catalogo:
 #--------------------------------------------------------------------
 # Crear una instancia de la clase Catalogo
 #catalogo = Catalogo(host='localhost', user='root', password='', database='miapp')
-catalogo = Catalogo(host="localhost", user="root", password="root-123456", database="miapp")
+catalogo = Catalogo(host="172.18.1.18", user="root", password="root-123456", database="miapp")
 # catalogo = Catalogo(host='florcodo1.mysql.pythonanywhere-services.com', user='FlorCodo1', password='root-123456', database='FlorCodo1$miapp')
 
 # Carpeta para guardar las imagenes
@@ -205,19 +206,19 @@ def eliminar_producto(codigo):
     else:
         return jsonify({"mensaje": "Producto no encontrado"}), 404
     
-@app.route("/altas")
+@app.route('/altas')
 def altas():
     return render_template('altas.html')
 
-@app.route("/listado")
+@app.route('/listado')
 def listado():
     return render_template('listado.html')
 
-@app.route("/listadoEliminar")
+@app.route('/listadoEliminar')
 def listadoEliminar():
     return render_template('listadoEliminar.html')
 
-@app.route("/modificaciones")
+@app.route('/modificaciones')
 def modificaciones():
     return render_template('modificaciones.html')
 
